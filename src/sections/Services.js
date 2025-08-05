@@ -3,15 +3,12 @@ import { motion } from "framer-motion";
 
 function Services() {
   const [services, setServices] = useState([]);
-  const [BASE_URL, setBaseUrl] = useState("");
 
   useEffect(() => {
     // Load backend URL dynamically from config.json
     fetch("/config.json")
       .then((res) => res.json())
       .then((config) => {
-        setBaseUrl(config.BASE_URL);
-
         // Fetch services from backend
         return fetch(`${config.BASE_URL}/api/services`);
       })
