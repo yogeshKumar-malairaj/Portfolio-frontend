@@ -3,7 +3,6 @@ import "../style/skills.css";
 
 function SkillsGrid() {
   const [skills, setSkills] = useState([]);
-  const [baseUrl, setBaseUrl] = useState("");
 
   useEffect(() => {
     // Load API URL from public/config.json
@@ -11,8 +10,6 @@ function SkillsGrid() {
       .then((res) => res.json())
       .then((config) => {
         const apiUrl = config.BASE_URL;
-        setBaseUrl(apiUrl);
-
         return fetch(`${apiUrl}/api/skills`);
       })
       .then((res) => res.json())
