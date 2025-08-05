@@ -16,7 +16,7 @@ function Navbar() {
 
         <div className={`pages ${isOpen ? "active" : ""}`}>
           <ul className="nav-links">
-            <li><a href="/#home"><Link to="/">Home</Link></a></li>
+            <li><a href="/#home">Home</a></li>
             <li><a href="/#about">About</a></li>
             <li><a href="/#services">Service</a></li>
             <li><a href="/#skills">Skills</a></li>
@@ -42,5 +42,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
