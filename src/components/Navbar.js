@@ -28,7 +28,7 @@ function Navbar() {
         </div>
 
         <div className="DFM">
-          <a href="#">DFM</a>
+          <a href="/#dfm">DFM</a>
         </div>
 
         <div className="hamburger" onClick={toggleMenu}>
@@ -42,6 +42,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
 
