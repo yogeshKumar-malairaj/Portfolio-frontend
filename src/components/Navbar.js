@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +18,14 @@ function Navbar() {
 
         <div className={`pages ${isOpen ? "active" : ""}`}>
           <ul className="nav-links">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Service">Service</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Project">Project</a></li>
-            <li><a href="#Reviews">Reviews</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            <li className="mobile-DFM"><a href="#">DFM</a></li>
+            <li><a href="/"><Link to="/">Home</Link></a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Service</a></li>
+            <li><a href="/">Skills</a></li>
+            <li><a href="/">Project</a></li>
+            <li><a href="/">Reviews</a></li>
+            <li><a href="/">Contact</a></li>
+            <li className="mobile-DFM"><a href="/">DFM</a></li>
           </ul>
         </div>
 
@@ -42,3 +44,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
