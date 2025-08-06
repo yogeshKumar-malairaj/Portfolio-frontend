@@ -40,7 +40,7 @@ function About() {
       <div className="About-right">
         {aboutData?.about_image_url ? (
           <motion.img
-            src={`${BASE_URL}${data.about_image_url}`}
+            src={`${BASE_URL}${aboutData.about_image_url}`}
             alt="About"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -107,4 +107,5 @@ function About() {
 }
 
 export default About;
+
 
