@@ -3,9 +3,10 @@ import "../style/skills.css";
 
 function SkillsGrid() {
   const [skills, setSkills] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load API URL from public/config.json
+    // Load API base URL from config.json
     fetch("/config.json")
       .then((res) => res.json())
       .then((config) => {
@@ -13,8 +14,15 @@ function SkillsGrid() {
         return fetch(`${apiUrl}/api/skills`);
       })
       .then((res) => res.json())
-      .then((data) => setSkills(data))
-      .catch((err) => console.error("Failed to load skills:", err));
+      .then((data) => {
+        console.log("Fetched skills:", data); // Debug log
+        setSkills(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load skills:", err);
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -22,7 +30,9 @@ function SkillsGrid() {
       <h2 className="sec-title">Technical Skills</h2>
 
       <div className="skills-grid">
-        {skills.length > 0 ? (
+        {loading ? (
+          <p className="loading-text">Loading skills...</p>
+        ) : skills.length > 0 ? (
           skills.map((skill, index) => (
             <div className="skill-card" key={index}>
               <div className="skill-icon">
@@ -45,7 +55,7 @@ function SkillsGrid() {
             </div>
           ))
         ) : (
-          <p className="loading-text">Loading skills...</p>
+          <p className="loading-text">No skills found.</p>
         )}
       </div>
     </section>
