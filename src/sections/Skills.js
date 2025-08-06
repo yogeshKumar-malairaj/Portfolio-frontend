@@ -40,7 +40,6 @@ function SkillsGrid() {
               <div className="skill-desc">{skill.description}</div>
               <div className="progress-wrapper">
                 <div className="progress-label">
-                  <span>{skill.description}</span>
                   <span>{skill.level || 0}%</span>
                 </div>
                 <div className="progress-bar">
@@ -61,3 +60,4 @@ function SkillsGrid() {
 }
 
 export default SkillsGrid;
+
