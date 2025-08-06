@@ -95,10 +95,12 @@ function About() {
           <a href="#Contact">
             <button>Hire Me</button>
           </a>
-          {aboutData?.CV_link && (
+          {aboutData?.cv_link && (
             <a href={aboutData.cv_link} target="_blank" rel="noopener noreferrer">
               <button>Download CV</button>
             </a>
+          )}
+
           )}
         </div>
       </div>
@@ -107,5 +109,6 @@ function About() {
 }
 
 export default About;
+
 
 
