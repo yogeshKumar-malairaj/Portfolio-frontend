@@ -6,7 +6,6 @@ function SkillsGrid() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load API base URL from config.json
     fetch("/config.json")
       .then((res) => res.json())
       .then((config) => {
@@ -15,7 +14,6 @@ function SkillsGrid() {
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Fetched skills:", data); // Debug log
         setSkills(data);
         setLoading(false);
       })
@@ -38,11 +36,11 @@ function SkillsGrid() {
               <div className="skill-icon">
                 <i className={skill.icon || "fas fa-code"}></i>
               </div>
-              <div className="skill-title">{skill.name || "Unnamed Skill"}</div>
-
+              <div className="skill-title">{skill.name}</div>
+              <div className="skill-desc">{skill.description}</div>
               <div className="progress-wrapper">
                 <div className="progress-label">
-                  <span>{skill.description || "Proficiency"}</span>
+                  <span>{skill.description}</span>
                   <span>{skill.level || 0}%</span>
                 </div>
                 <div className="progress-bar">
@@ -55,7 +53,7 @@ function SkillsGrid() {
             </div>
           ))
         ) : (
-          <p className="loading-text">No skills found.</p>
+          <p>No skills found.</p>
         )}
       </div>
     </section>
