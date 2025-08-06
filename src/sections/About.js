@@ -40,7 +40,7 @@ function About() {
       <div className="About-right">
         {aboutData?.about_image_url ? (
           <motion.img
-            src={`${BASE_URL}/static/uploads/${aboutData.about_image_url}`}
+            src={`${BASE_URL}${data.about_image_url}`}
             alt="About"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -72,19 +72,19 @@ function About() {
           <tbody>
             <tr>
               <td><strong>Name:</strong></td>
-              <td>{aboutData?.Name || "Loading..."}</td>
+              <td>{aboutData?.name || "Loading..."}</td>
             </tr>
             <tr>
               <td><strong>Email:</strong></td>
-              <td>{aboutData?.Email || "Loading..."}</td>
+              <td>{aboutData?.email || "Loading..."}</td>
             </tr>
             <tr>
               <td><strong>Date of Birth:</strong></td>
-              <td>{aboutData?.Dob || "Loading..."}</td>
+              <td>{aboutData?.dob || "Loading..."}</td>
             </tr>
             <tr>
               <td><strong>Address:</strong></td>
-              <td>{aboutData?.Address?.split(',').map((line, i) => (
+              <td>{aboutData?.address?.split(',').map((line, i) => (
                 <div key={i}>{line.trim()}</div>
               ))}</td>
             </tr>
@@ -96,7 +96,7 @@ function About() {
             <button>Hire Me</button>
           </a>
           {aboutData?.CV_link && (
-            <a href={aboutData.CV_link} target="_blank" rel="noopener noreferrer">
+            <a href={aboutData.cv_link} target="_blank" rel="noopener noreferrer">
               <button>Download CV</button>
             </a>
           )}
@@ -107,3 +107,4 @@ function About() {
 }
 
 export default About;
+
