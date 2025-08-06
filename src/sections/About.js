@@ -100,8 +100,6 @@ function About() {
               <button>Download CV</button>
             </a>
           )}
-
-          )}
         </div>
       </div>
     </section>
@@ -109,6 +107,7 @@ function About() {
 }
 
 export default About;
+
 
 
 
