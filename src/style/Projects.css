@@ -5,23 +5,11 @@
   }
   
   .sec-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #050F2A;
-    position: relative;
-  }
-  
-  .sec-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #7BBBFF, #B8A9FF);
-    border-radius: 2px;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #050F2A;
+  margin: 1.5rem auto
   }
   
   /* Project Filters */
@@ -187,3 +175,4 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(123, 187, 255, 0.4);
   }
+
