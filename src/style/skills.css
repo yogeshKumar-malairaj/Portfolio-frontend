@@ -10,10 +10,6 @@
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: #2d3748;
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .sec-title::after {
@@ -130,3 +126,4 @@
     padding: 1.5rem;
   }
 }
+
