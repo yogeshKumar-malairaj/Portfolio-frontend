@@ -8,7 +8,7 @@
 .sec-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
+  margin: 1.5rem auto;
   color: #2d3748;
 }
 
@@ -126,4 +126,5 @@
     padding: 1.5rem;
   }
 }
+
 
